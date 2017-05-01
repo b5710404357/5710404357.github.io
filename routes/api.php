@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::resource('cal/{captical}/{per}','api\CalController@calculate');
+//Route::resource('cal/{captical}/{per}','api\CalController@calculate');
