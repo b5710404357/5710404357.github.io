@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a
+class ComposerStaticInitf67d9f07a0fc1239a9171d2ab53ecc07
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -1525,6 +1525,7 @@ class ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
+        'League\\Flysystem\\Adapter\\CanOverwriteFiles' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/CanOverwriteFiles.php',
         'League\\Flysystem\\Adapter\\Ftp' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/Ftp.php',
         'League\\Flysystem\\Adapter\\Ftpd' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/Ftpd.php',
         'League\\Flysystem\\Adapter\\Local' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/Local.php',
@@ -3236,10 +3237,10 @@ class ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit6322a25a63da6f443cc290b744b7ed2a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf67d9f07a0fc1239a9171d2ab53ecc07::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf67d9f07a0fc1239a9171d2ab53ecc07::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf67d9f07a0fc1239a9171d2ab53ecc07::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf67d9f07a0fc1239a9171d2ab53ecc07::$classMap;
 
         }, null, ClassLoader::class);
     }

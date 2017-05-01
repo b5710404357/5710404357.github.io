@@ -1259,6 +1259,7 @@ return array(
     'League\\Flysystem\\AdapterInterface' => $vendorDir . '/league/flysystem/src/AdapterInterface.php',
     'League\\Flysystem\\Adapter\\AbstractAdapter' => $vendorDir . '/league/flysystem/src/Adapter/AbstractAdapter.php',
     'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => $vendorDir . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
+    'League\\Flysystem\\Adapter\\CanOverwriteFiles' => $vendorDir . '/league/flysystem/src/Adapter/CanOverwriteFiles.php',
     'League\\Flysystem\\Adapter\\Ftp' => $vendorDir . '/league/flysystem/src/Adapter/Ftp.php',
     'League\\Flysystem\\Adapter\\Ftpd' => $vendorDir . '/league/flysystem/src/Adapter/Ftpd.php',
     'League\\Flysystem\\Adapter\\Local' => $vendorDir . '/league/flysystem/src/Adapter/Local.php',

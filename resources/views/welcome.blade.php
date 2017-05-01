@@ -9,99 +9,71 @@
         <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css"> -->
-        <title>คำนวณค่าน้ำ</title>
+        <title>การคำนวณหาค่าราคาขายสินค้า</title>
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
            </head>
 
            <body >
 
-             <section class="section" >
-          <!-- <section class="hero is-info is-large"> -->
-             <div class="hero-body">
-
-
-               <!-- <div class="container has-text-centered"> -->
-               <!-- <section class="hero is-primary is-medium is-success"> -->
-                 <h1 class="title">
-                   คำนวณค่าประปา
-                 </h1>
-
-                 <div class="column is-11 is-offset-1">
-
-                <div class="field">
-
-                  <!-- <section class="hero is-primary is-medium is-success"> -->
-                      <label class="label">  <br>ประปาที่ใช้บริการ : &nbsp; </label>
-                      <span class="select is-medium">
-                        <select>
-
-                          <option>ทั่วไป(ยกเว้น พื้นที่พิเศษ)</option>
-                        </select>
-
-                      </span>
-                    <!-- <label class="label">  <br>ปริมาณการใช้น้ำ : &nbsp; </label> -->
-                      <label class="label">  <br>ปริมาณการใช้น้ำ : &nbsp; </label>
-                      <form action="calculate" method="post" >
-                        <!-- <label class="label">  <br>ปริมาณการใช้น้ำ : &nbsp; </label> -->
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                       <div class="field" style="width: 500px;">
-                         <p class="control  has-icons-right">
-                          <input name = "unit" class="input is-info" type="text" placeholder="หน่วย" value="" >
-
-                          <span class="icon is-small is-right">
-                            <i class="fa fa-check"></i>
-                          </span>
-                        </div>
-                        <button class="button is-primary" type = "submit">Button</button>
-                    </form>
-                        <!-- </section> -->
-               </div>
-
+            <section class="hero is-medium is-primary is-bold">
+              <div class="hero-body">
+                <div class="container">
+                  <h1 class="title">
+                    การคำนวณหาค่าราคาขายสินค้า
+                  </h1>
+                </div>
+              </div>
+            </section>
+               
             </div>
-             </div>
-              <div class="title">ค่าใช้จ่ายรวม 
-
-                  </div>
-            <div class="content">
-                  <table class="table" style="width: 1000px; " align="center">
-                    <thead>
-                      <tr>
-                        <th width="50%">ปริมาณน้ำที่ใช้อ่านต่อที่ (ลบ.ม)</th>
-                        <th width="50%">เป็นเงินทั้งสิ้น (บาท)</th>
-
-                  <!-- {{{ $unit or '' }}} -->
-
-                  </tr>
-                    </thead>
-                    <tbody>
-                      <!-- <tr> -->
-                        @isset($lstUnit)
-                          <tr>
-                              @foreach($lstUnit as $unit)
-                                  <!-- <div class='club'> -->
-                                  <!-- <td>{{$unit}}  </td> -->
-                                  <td>{{ $unit }}</td><br>
-                                  <!-- <td>{{ $unit }}</td> -->
-                              <!-- </tr> -->
-                              @endforeach
-
-                        @endisset
-
-
-                          <!-- </tr> -->
-                        </tbody>
-                      </table>
+<form action="welcome" method="get">
+     <div class="column is-4 is-offset-1">
+                  <label class="label">ราคาต้นทุน</label>      
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-medium" name="capital" type="text" placeholder="">
+              </div>
             </div>
-    </section>
+          </div>
+            <div class="field-label is-medium">
+            <label class="label">บาท</label>
+          </div>
+        </div>
+              
+        <label class="label">เปอร์เซนต์</label>      
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-medium" name="per" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+            <div class="field-label is-medium">
+            <label class="label">%</label>
+          </div>
+        </div>
+               <button class="button is-primary" name="cbutton">คำนวณ</button>
+            
+    <label class="label">ราคาขายสินค้า</label>      
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <input class="input is-medium" name="ans" type="text" placeholder="">
+              </div>
+            </div>
+          </div>
+            <div class="field-label is-medium">
+            <label class="label">บาท</label>
+          </div>
+        </div>
+     </form>
+    </div>
+     </div>
 
     </body>
-    .body{
-         background-image: url(water-wallpaper.jpg) ;
-         background-position: center center;
-         background-repeat:  no-repeat;
-         background-attachment: fixed;
-         background-size:  cover;
-                                         background-color: #999;
-    }
 </html>

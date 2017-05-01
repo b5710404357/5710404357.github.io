@@ -12,11 +12,9 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-//
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
-// Route::resource('cal','Api\calRentControl');
-// Route::get('calculateRent','Api\calRentControl@store');
-Route::get('calculate/{unit}','Api\calRentControl@cal');
-// Route::get('calc/{unit}','Api\calRentControl@test');
+
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+    //return $request->user();
+//});
+
+Route::get('cal/{capital}/{per}','Api\CalController@calculate');
